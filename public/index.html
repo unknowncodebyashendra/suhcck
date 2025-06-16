@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The Science Union of Holy Cross College is a student organization that promotes interest in science and technology. We host events like science fairs, workshops, and guest lectures, offering students opportunities to explore, experiment, and showcase their scientific ideas on a broader platform.">
+    <meta name="author" content="Science Union of Holy Cross College, Kalutara">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Science Union of Holy Cross College, Kalutara | Official Website</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-digimedia-v1.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" href="assets/images/favicon.png">
+
+  </head>
+
+<body>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAj3Ulfhqn86Ywx9ZUZo0D_0S-gfKyGmJY",
+      authDomain: "hcc-science-union.firebaseapp.com",
+      projectId: "hcc-science-union",
+      storageBucket: "hcc-science-union.appspot.com",
+      messagingSenderId: "213899247020",
+      appId: "1:213899247020:web:1699c1540e13c1bcecce09",
+      measurementId: "G-T8XGZDVKS1"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- Pre-header Starts -->
+  <div class="pre-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8 col-7">
+          <ul class="info">
+            <li><a href="report.html"><i class="fa fa-exclamation-triangle"></i>Report</a></li>
+            <li><a href="sitemap.html"><i class="fa fa-globe"></i>Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-5">
+          <ul class="social-media">
+            <li><a href="https://instagram.com/hccscienceunion"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/hccscienceunion?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com/@ScienceUnionofHolyCrossCollege"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/hccsciencunion/"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Pre-header End -->
+
+  <!-- ***** Header Area Start ***** -->
+  <div id="header"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+
+            // Ensure event listeners are attached AFTER loading header
+            setTimeout(() => {
+                let menuButton = document.querySelector("#menu-trigger");
+                let menu = document.querySelector("#Menu");
+
+                if (menuButton && menu) {
+                    menuButton.addEventListener("click", function () {
+                        menu.classList.toggle("active");
+                        console.log("Menu toggled"); // Debugging line
+                    });
+                } else {
+                    console.error("Menu button or menu not found.");
+                }
+            }, 100); // Short delay to ensure elements are in the DOM
+        })
+        .catch(error => console.error("Error loading header:", error));
+});
+
+</script>
+
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h6>Science Union of Holy Cross College, Kalutara</h6>
+                    <h2>Promoting science</h2>
+                    <h2>for a better planet.</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="assets/images/slider-dec.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner-2" style="background-color: #000000ed;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" style="display: flex;">
+          <img src="assets/images/geneX/logo blured.png" alt="">
+          <div class="first-button scroll-to-section" style="margin-top: 5%; margin-left: 25%; margin-bottom: 5%;">
+            <a style="color: #fff !important;border-color: #fff !important;" href="geneX-25.html">More Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div id="wiai" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading  wow fadeInDown" style="margin-bottom: 30px;" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Celebrating <em>125 Years</em> of Excellence</h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active" style="  background-color: #912976c7;">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4 style="color: #fff;">Holy Cross College, Kalutara – Celebrating 125 Years of Excellence</h4>
+                                <p style="color: #fff;">In 2025, Holy Cross College, Kalutara proudly celebrates its 125th anniversary, marking over a century of academic excellence, spiritual growth, and holistic education. Founded in the late 19th century as a private school, it was officially named Holy Cross English School in 1890 by Rev. Fr. Wilkinson. Under Rev. Fr. Leo Fernando, it became a semi-government institution, laying the foundation for its prestigious status today.</p>
+                                <p style="color: #fff;">Throughout its history, the college has grown under the leadership of dedicated rectors, expanding its infrastructure and excelling in academics, sports, and extracurricular activities. Highlights include a student securing the highest marks in the Cambridge Examination across the Commonwealth, the introduction of the Cadet Platoon, and national victories in speech and drama competitions. The era of Rev. Fr. Gaston Chaulieu (1930–1946) is remembered as a "Golden Era" with significant educational advancements.</p>
+                                <h4 style="color: #fff;">Join the Celebration!</h4>
+                                <div class="border-125-first-button"><a href="assets/images/125/bigmatch.jpeg">Battle of Dreams - HCC vs SAC</a></div>
+                                <div class="border-125-first-button"><a href="125.html">Other Events</a></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img src="assets/images/125/125_logo-removebg.png" alt="">
+                              </div>
+                              <h4 style="color: #fff;">A Prestigious Institution in 2025</h4>
+                                <p style="color: #fff;">As Holy Cross College reaches this historic milestone, it continues to be a leading institution in Sri Lanka, shaping future generations with its mission of "Educating for Human Greatness." Recent achievements reflects its commitment to both academic and athletic excellence.</p>
+                                <p style="color: #fff;">This 125-year journey stands as a testament to the school’s rich heritage, unwavering dedication, and vision for the future. With continued growth, Holy Cross College remains a beacon of knowledge and values, impacting not just Kalutara but the entire nation.</p>
+                                <h4></h4>
+                                <h5>Follow @hccscienceunion & Crusader Media social medias for New Updates!</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="">
+		<div class="container">
+			<div id="instagram" class="contact-us section" style="padding-top: 80px; padding-bottom: 0px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                <h4>Instagram <em>Feed<em></h4>
+                <div class="line-dec"></div>
+              </div>
+              <iframe src="https://www.instagram.com/hccscienceunion/embed" width="100%" height="515" frameborder="0" scrolling="no" style="margin-bottom: 75px;"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+		</div>
+	</section>
+
+  <div id="wiai" class="services section"  style="margin-bottom: 50px;" >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+                              <h3>Theme Song</h3>
+                            </div>
+                            <div class="col-lg-6 align-self-center" style="margin-top: -100px;">
+                              <div class="right-image">
+                                <img src="assets/images/logo_v1_bg.png" alt="">
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <p>එක රෑනේ එකට ඉන්නේ 
+                                <br>එකා ලෙසටම පෙරටම යන්නේ// 
+                                <br>සිරිකුරුසේ නම බබළන විද්‍යා අංශේ 
+                                <br>සැම එක් වී මව් දිනවන විද්‍යා අංශේ 
+                                <br>පුතුන් අප.. </p>
+                                  
+                                <p>සරසමින් සැරසෙමින් පෙරට පා තබනුයේ//// </p>
+                                  
+                                <p>නෙකවිද බාධක අප වට කර වැට බැන්දත්  
+                                <br>ඇත අප හට විසදුම් දෙන්නට ඒවාටත් 
+                                <br>අප සැම එක් වී තබනා පියවර සවිමත් 
+                                <br>මතු ලොව ජයගන්නට අපි දැන් සූදානම් </p>
+                                  
+                                <p>සරසමින් සැරසෙමින්..//// </p>
+                                  
+                                <p>නොව අප අදිටන පරයා යන්නට මනුදම් 
+                                <br>අප අදිනට සදනට ලොව ගුණයෙන් පිරිපුන් 
+                                <br>සොදගුරු මව් පියවරු ඇසුරෙහි අප වැඩෙමින් 
+                                <br>නැණවත් දරුවන් වමු කියමුය අප සතොසින් </p>
+                                  
+                                <p>සරසමින් සැරසෙමින් ../// </p>
+
+                                <p>Lyrics: Navod Eleesha De Silva
+                                <br>Music: Chanul Dewnith</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="blog" class="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="section-heading">
+            <h4>Check Our  <em> Posts</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="blog-post">
+            <div class="down-content">
+              <span class="category">Artificial Intelligence</span>
+              <span class="date">23 May 2023</span>
+              <a href="blogs/01.html"><h4>Artificial Intelligence</h4></a>
+              <p>Artificial intelligence (AI) is a branch of computer science that deals with the creation of intelligent agents, which are systems that can reason, learn, and act autonomously. AI research has been highly successful in developing effective techniques for solving a wide range of problems, from game playing to medical diagnosis.</p>
+              <div class="border-first-button"><a href="blogs/01.html">Read More</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="blog-post">
+            <div class="down-content">
+                    <span class="category">Human Civilization</span>
+                    <span class="date">12 May 2023</span>
+                    <a href="blogs/02.html"><h4>The Future of Human Civilization</h4></a>
+                    <p>
+                      The future of human civilization is a topic that has been debated by philosophers, scientists, and artists for centuries. There are many possible futures for humanity, and the one that we ultimately create will depend on the choices that we make today. One of the biggest challenges facing humanity is climate change.</p>
+                    <div class="border-first-button"><a href="blogs/02.html">Read More</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="ftco-section">
+		<div class="container">
+			<div id="contact" class="contact-us section" style="padding-top: 0px; padding-bottom: 50px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+              <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                <h6>Contact Us</h6>
+                <h4>Get In Touch With Us <em>Now</em></h4>
+                <div class="line-dec"></div>
+              </div>
+            </div>
+			<div class="row justify-content-center">
+				<div class="col-lg-10 col-md-12">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-md-7 d-flex align-items-stretch">
+								<div class="contact-wrap w-100 p-md-5">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d680.719578884902!2d79.96384432331241!3d6.576268473377983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae237277cc45f91%3A0xa6c1a3310d9a3e07!2sHoly%20Cross%20College!5e0!3m2!1sen!2slk!4v1683604950310!5m2!1sen!2slk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								</div>
+							</div>
+							<div class="col-md-5 d-flex align-items-stretch">
+								<div class="info-wrap bg-primary w-100 p-lg-5 p-4">
+									<h3 class="mb-4 mt-md-4">Contact us</h3>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p style="color: white;"><span style=" font-weight: 600;">Address:</span><a style="color: white;" href="">Science Union of Holy Cross College, Galle Road, Kalutara, Sri Lanka. 12000</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p style="color: white;"><span style=" font-weight: 600;">Phone:</span> <a style="color: white;" href="callto:+94776527834">(+94) 77 652 7834</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-envelope"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p style="color: white;"><span style=" font-weight: 600;">Email:</span> <a style="color: white;" href="mailto:scienceunionhcck@gmail.com">scienceunionhcck@gmail.com</a></p>
+					          </div>
+				          </div>
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">The Science Union of Holy Cross College is a student organization that promotes interest in science and technology. We host events like science fairs, workshops, and guest lectures, offering students opportunities to explore, experiment, and showcase their scientific ideas on a broader platform.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="https://hccscienceunion.com/home.html#contact">Contact us</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Other Links</h6>
+          <ul class="footer-links">
+            <li><a href="http://holycrosskalutara.lk/">School Website</a></li>
+            <li><a href="http://holycrosskalutara.lk/">OBU Website</a></li>
+            <li><a href="https://aissa.lk/">AISSA Website</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p><script>
+            const copyrightName = " - Holy Cross College Science Union.";
+              const copyrightDate = new Date();
+              document.write("&copy; "  + copyrightDate.getFullYear()  + copyrightName );
+          </script></p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="instagram" href="https://instagram.com/hccscienceunion"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="facebook" href="https://www.facebook.com/hccscienceunion?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com/@ScienceUnionofHolyCrossCollege"><i class="fa fa-youtube"></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/company/hccsciencunion/"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+</body>
+</html>

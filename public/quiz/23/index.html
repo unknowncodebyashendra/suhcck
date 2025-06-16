@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Game | Science Union of Holy Cross College, Kalutara</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Quiz Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Bungee|Sirin+Stencil:400,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAj3Ulfhqn86Ywx9ZUZo0D_0S-gfKyGmJY",
+          authDomain: "hcc-science-union.firebaseapp.com",
+          projectId: "hcc-science-union",
+          storageBucket: "hcc-science-union.appspot.com",
+          messagingSenderId: "213899247020",
+          appId: "1:213899247020:web:1699c1540e13c1bcecce09",
+          measurementId: "G-T8XGZDVKS1"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+      
+<!-- partial:index.partial.html -->
+<!-- QUIZ ONE -->
+  <section class="section-1" id="section-1">
+      <main>
+          <div class="text-container">
+              <h3>Quiz Game</h3>
+              <p>QUESTION 1 OF 10</p>
+              <p>Who is the father of Artificial Intelligence?</p>
+          </div>
+          <form>
+              <div class="quiz-options">
+                <input type="radio" class="input-radio one-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="one-b" name="yes-1">
+                <label class="radio-label jsjwjdwjdwjdwin" for="one-b">
+                    <span class="alphabet">A</span> Doug Cutting <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                  <input type="radio" class="input-radio one-a jshdgdgwgdwfdfwdwjfdjwwdwdco" id="one-a" name="yes-1" required>
+                  <label class="radio-label jsjwjdwjdwjdwco" for="one-a">
+                      <span class="alphabet">B</span> John McCarthy <img class="icon jdsjkefkefkefefexco" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588518387/jdsjkefkefkefefexco.svg" alt="">
+                  </label>
+                  <input type="radio" class="input-radio one-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="one-b" name="yes-1">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="one-b">
+                      <span class="alphabet">C</span> William S. <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+                  <input type="radio" class="input-radio one-c jshdgdgwgdwfdfwdwjfdjwwdwdin" id="one-c" name="yes-1">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="one-c">
+                      <span class="alphabet">D</span> Rasmus Lerdorf <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+              </div>
+              <a id="btn" type="submit" onclick="window.location.href='#section-2'">Next</a>
+          </form>
+      </main>
+  </section>
+  <!-- QUIZ TWO -->
+  <section class=" section-2" id="section-2">
+      <main>
+          <div class="text-container">
+              <h3>Quiz Game</h3>
+              <p>QUESTION 2 OF 10</p>
+              <p>What are the main goals of AI?</p>
+          </div>
+          <form>
+              <div class="quiz-options">
+                  <input type="radio" class="input-radio two-a jshdgdgwgdwfdfwdwjfdjwwdwdin" id="two-a" name="no-2" required="">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="two-a">
+                      <span class="alphabet">A</span>  To Create Expert Systems <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+                  <input type="radio" class="input-radio two-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="two-b" name="no-2" required="">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="two-b">
+                      <span class="alphabet">B</span> To Implement Human Intelligence in Machines <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+                  <input type="radio" class="input-radio two-c jshdgdgwgdwfdfwdwjfdjwwdwdco" id="two-c" name="no-2" required="">
+                  <label class="radio-label jsjwjdwjdwjdwco" for="two-c">
+                      <span class="alphabet">C</span> Both A and B <img class="icon jdsjkefkefkefefexco" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588518387/jdsjkefkefkefefexco.svg">
+                  </label>
+                  <input type="radio" class="input-radio two-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="two-b" name="no-2" required="">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="two-d">
+                      <span class="alphabet">D</span> None of the Above <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+              </div>
+              <a id="btn" type="submit" onclick="window.location.href='#section-3'">Next</a>
+          </form>
+      </main>
+  </section>
+  <!-- QUIZ THREE -->
+  <section class="section-3" id="section-3">
+      <main>
+          <div class="text-container">
+              <h3>Quiz Game</h3>
+              <p>QUESTION 3 OF 10</p>
+              <p>Which is not the commonly used programming language for AI?</p>
+          </div>
+          <form>
+              <div class="quiz-options">
+                  <input type="radio" class="input-radio three-a jshdgdgwgdwfdfwdwjfdjwwdwdin" id="three-a" name="no-3" required="">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="three-a">
+                      <span class="alphabet">A</span> PROLOG <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+                  <input type="radio" class="input-radio three-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="three-b" name="no-3" required="">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="three-b">
+                      <span class="alphabet">B</span> LISP <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+                  <input type="radio" class="input-radio three-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="three-b" name="no-3" required="">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="three-b">
+                      <span class="alphabet">C</span> Javascript <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+                  <input type="radio" class="input-radio three-c jshdgdgwgdwfdfwdwjfdjwwdwdco" id="three-c" name="no-3" required="">
+                  <label class="radio-label jsjwjdwjdwjdwco" for="three-c">
+                      <span class="alphabet">D</span> Perl <img class="icon jdsjkefkefkefefexco" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588518387/jdsjkefkefkefefexco.svg">
+                  </label>
+              </div>
+              <a id="btn" type="submit" onclick="window.location.href='#section-4'">Next</a>
+          </form>
+      </main>
+  </section>
+  <!-- QUIZ FOUR -->
+  <section class="section-4" id="section-4">
+      <main>
+          <div class="text-container">
+              <h3>Quiz Game</h3>
+              <p>QUESTION 4 OF 10</p>
+              <p>Ways to achieve AI in real-life are_________.</p>
+          </div>
+          <form>
+              <div class="quiz-options">
+                  <input type="radio" class="input-radio four-a jshdgdgwgdwfdfwdwjfdjwwdwdin" id="four-a" name="no-4" required="">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="four-a">
+                      <span class="alphabet">A</span> Machine Learning <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+                  <input type="radio" class="input-radio four-c jshdgdgwgdwfdfwdwjfdjwwdwdin" id="four-c" name="no-4" required="">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="four-c">
+                      <span class="alphabet">B</span> Deep Learning <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+                  <input type="radio" class="input-radio four-b jshdgdgwgdwfdfwdwjfdjwwdwdco" id="four-b" name="no-4" required="">
+                  <label class="radio-label jsjwjdwjdwjdwco" for="four-b">
+                      <span class="alphabet">C</span> Both A & B <img class="icon jdsjkefkefkefefexco" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588518387/jdsjkefkefkefefexco.svg">
+                  </label>
+                  <input type="radio" class="input-radio four-c jshdgdgwgdwfdfwdwjfdjwwdwdin" id="four-c" name="no-4" required="">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="four-c">
+                      <span class="alphabet">D</span> None of the above <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+              </div>
+              <a id="btn" type="submit" onclick="window.location.href='#section-5'">Next</a>
+          </form>
+      </main>
+  </section>
+  <!-- QUIZ FIVE -->
+  <section class="section-5" id="section-5">
+      <main>
+          <div class="text-container">
+              <h3>Quiz Game</h3>
+              <p>QUESTION 5 OF 10</p>
+              <p>The 2’s complement of binary number 1010 is ___________</p>
+          </div>
+          <form>
+              <div class="quiz-options">
+                <input type="radio" class="input-radio five-c jshdgdgwgdwfdfwdwjfdjwwdwdin" id="five-c" name="no-5">
+                <label class="radio-label jsjwjdwjdwjdwin" for="five-c">
+                    <span class="alphabet">A</span> 0101 <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio five-c jshdgdgwgdwfdfwdwjfdjwwdwdin" id="five-c" name="no-5">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="five-c">
+                      <span class="alphabet">B</span> 1010 <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+                <input type="radio" class="input-radio five-a jshdgdgwgdwfdfwdwjfdjwwdwdco" id="five-a" name="no-5" required>
+                  <label class="radio-label jsjwjdwjdwjdwco" for="five-a">
+                      <span class="alphabet">C</span> 0110 <img class="icon jdsjkefkefkefefexco" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588518387/jdsjkefkefkefefexco.svg" alt="">
+                  </label>
+                  <input type="radio" class="input-radio five-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="five-b" name="no-5">
+                  <label class="radio-label jsjwjdwjdwjdwin" for="five-b">
+                      <span class="alphabet">D</span> 1110 <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                  </label>
+              </div>
+              <a id="btn" type="submit" onclick="window.location.href='#section-6'">Next</a>
+          </form>
+      </main>
+      <!-- SCORE COUNTER -->
+  </section>
+  <!-- QUIZ SIX -->
+  <section class="section-6" id="section-6">
+    <main>
+        <div class="text-container">
+            <h3>Quiz Game</h3>
+            <p>QUESTION 6 OF 10</p>
+            <p>The output of a logic gate is 1 when all the input are at logic 0 as shown below</p>
+        </div>
+        <form>
+            <div class="quiz-options">
+                <input type="radio" class="input-radio six-a jshdgdgwgdwfdfwdwjfdjwwdwdin" id="six-a" name="no-6" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="six-a">
+                    <span class="alphabet">A</span>  a NAND or an EX-OR <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio six-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="six-b" name="no-6" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="six-b">
+                    <span class="alphabet">B</span> an OR or an EX-NOR <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio six-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="six-b" name="no-6" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="six-d">
+                    <span class="alphabet">C</span> an AND or an EX-OR <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio six-c jshdgdgwgdwfdfwdwjfdjwwdwdco" id="six-c" name="no-6" required="">
+                <label class="radio-label jsjwjdwjdwjdwco" for="six-c">
+                    <span class="alphabet">D</span> a NOR or an EX-NOR <img class="icon jdsjkefkefkefefexco" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588518387/jdsjkefkefkefefexco.svg">
+                </label> 
+            </div>
+            <a id="btn" type="submit" onclick="window.location.href='#section-7'">Next</a>
+        </form>
+    </main>
+</section>
+<!-- QUIZ SEVEN -->
+<section class="section-7" id="section-7">
+    <main>
+        <div class="text-container">
+            <h3>Quiz Game</h3>
+            <p>QUESTION 7 OF 10</p>
+            <p>Which of the following are known as universal gates?</p>
+        </div>
+        <form>
+            <div class="quiz-options">
+                <input type="radio" class="input-radio seven-a jshdgdgwgdwfdfwdwjfdjwwdwdco" id="seven-a" name="no-7" required="">
+                <label class="radio-label jsjwjdwjdwjdwco" for="seven-a">
+                    <span class="alphabet">A</span>  NAND & NOR <img class="icon jdsjkefkefkefefexco" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588518387/jdsjkefkefkefefexco.svg">
+                </label>
+                <input type="radio" class="input-radio seven-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="seven-b" name="no-7" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="seven-b">
+                    <span class="alphabet">B</span> AND & OR <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio seven-c jshdgdgwgdwfdfwdwjfdjwwdwdin" id="seven-c" name="no-7" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="seven-c">
+                    <span class="alphabet">C</span> XOR & OR <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio seven-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="seven-b" name="no-7" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="seven-d">
+                    <span class="alphabet">D</span> EX-NOR & XOR <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+            </div>
+            <a id="btn" type="submit" onclick="window.location.href='#section-8'">Next</a>
+        </form>
+    </main>
+</section>
+<!-- QUIZ EIGHT -->
+<section class="section-8" id="section-8">
+    <main>
+        <div class="text-container">
+            <h3>Quiz Game</h3>
+            <p>QUESTION 8 OF 10</p>
+            <p>which one of the following represents an analog circuit diagram for OR gate?</p>
+        </div>
+        <form>
+            <div class="quiz-options">
+                <input type="radio" class="input-radio eight-a jshdgdgwgdwfdfwdwjfdjwwdwdin" id="eight-a" name="no-8" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="eight-a">
+                    <span class="alphabet">A</span>  To Create Expert Systems <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio eight-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="eight-b" name="no-8" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="eight-b">
+                    <span class="alphabet">B</span> To Implement Human Intelligence in Machines <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio eight-c jshdgdgwgdwfdfwdwjfdjwwdwdco" id="eight-c" name="no-8" required="">
+                <label class="radio-label jsjwjdwjdwjdwco" for="eight-c">
+                    <span class="alphabet">C</span> Both A and B <img class="icon jdsjkefkefkefefexco" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588518387/jdsjkefkefkefefexco.svg">
+                </label>
+                <input type="radio" class="input-radio eight-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="eight-b" name="no-8" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="eight-d">
+                    <span class="alphabet">D</span> None of the Above <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+            </div>
+            <a id="btn" type="submit" onclick="window.location.href='#section-9'">Next</a>
+        </form>
+    </main>
+</section>
+<!-- QUIZ NINE -->
+<section class="section-9" id="section-9">
+    <main>
+        <div class="text-container">
+            <h3>Quiz Game</h3>
+            <p>QUESTION 9 OF 10</p>
+            <p>For the logic circuit given below the output Y for A=0,B=0 and A=1,B=1 are,</p>
+        </div>
+        <form>
+            <div class="quiz-options">
+                <input type="radio" class="input-radio nine-a jshdgdgwgdwfdfwdwjfdjwwdwdin" id="nine-a" name="no-9" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="nine-a">
+                    <span class="alphabet">A</span>  0 & 1 <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio nine-b jshdgdgwgdwfdfwdwjfdjwwdwdco" id="nine-b" name="no-9" required="">
+                <label class="radio-label jsjwjdwjdwjdwco" for="nine-b">
+                    <span class="alphabet">B</span> 0 & 0 <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588518387/jdsjkefkefkefefexco.svg">
+                </label>
+                <input type="radio" class="input-radio nine-c jshdgdgwgdwfdfwdwjfdjwwdwdin" id="nine-c" name="no-9" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="nine-c">
+                    <span class="alphabet">C</span> 1 & 0 <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio nine-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="nine-b" name="no-9" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="nine-d">
+                    <span class="alphabet">D</span> 1 & 1 <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+            </div>
+            <a id="btn" type="submit" onclick="window.location.href='#section-10'">Next</a>
+        </form>
+    </main>
+</section>
+<!-- QUIZ TEN -->
+<section class="section-10" id="section-10">
+    <main>
+        <div class="text-container">
+            <h3>Quiz Game</h3>
+            <p>QUESTION 10 OF 10</p>
+            <p>How many minimum number of NOR gates are required to obtain an AND gate?</p>
+        </div>
+        <form>
+            <div class="quiz-options">
+                <input type="radio" class="input-radio ten-a jshdgdgwgdwfdfwdwjfdjwwdwdin" id="ten-a" name="yes-10" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="ten-a">
+                    <span class="alphabet">A</span>  One <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio ten-b jshdgdgwgdwfdfwdwjfdjwwdwdco" id="ten-b" name="yes-10" required="">
+                <label class="radio-label jsjwjdwjdwjdwco" for="ten-b">
+                    <span class="alphabet">B</span> Two <img class="icon jdsjkefkefkefefexco" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588518387/jdsjkefkefkefefexco.svg">
+                </label>
+                <input type="radio" class="input-radio ten-c jshdgdgwgdwfdfwdwjfdjwwdwdin" id="ten-c" name="yes-10" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="ten-c">
+                    <span class="alphabet">C</span> Three <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+                <input type="radio" class="input-radio ten-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="ten-b" name="yes-10" required="">
+                <label class="radio-label jsjwjdwjdwjdwin" for="ten-d">
+                    <span class="alphabet">D</span> Five <img class="icon jfdedgwfzexf4hjin" src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </label>
+            </div>
+            <a id="btn" type="submit" onclick="window.location.href='#game-over'">Submit</a>
+        </form>
+    </main>
+</section>
+  <div class="score-counter">
+      <p class="score-text">CORRECT:</p>
+  </div>
+  <!-- GAME OVER PAGE -->
+  <section id="game-over">
+      <div class="game-over-content">
+          <div class="over-text-cont">
+              <h1 data-heading="Game Over">Game Over</h1>
+              <h2>Total Score:</h2>
+              <a id="btn" type="submit" onclick="window.location.href='../../infusion-23.html'">Exit</a>
+          </div>
+      </div>
+  </section>
+  <!-- REFRESH PAGE SECTION -->
+  <section id="refresh">
+      <div class="refresh-content">
+          <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341.12 341.33">
+              <defs>
+                  <style>
+                      .cls-1 {
+                          fill: #fff;
+                      }
+                  </style>
+              </defs>
+              <title>multimedia2</title>
+              <path class="cls-1" d="M341.23,149.33V0L291.09,50.13A169.56,169.56,0,0,0,170.56,0C76.27,0,.11,76.37.11,170.67S76.27,341.33,170.56,341.33c79.47,0,146-54.4,164.91-128H291.09A127.94,127.94,0,1,1,170.56,42.67c35.31,0,67,14.72,90.13,37.86l-68.8,68.8Z" transform="translate(-0.11)" />
+          </svg>
+          <h2>Refresh/Reload this page to continue</h2>
+      </div>
+  </section>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz of ZEPHYRA'25 | Science Union of Holy Cross College, Kalutara</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(../../assets/images/zephyra/quiz_bg.jpg);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
+    }
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .question {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+    .options button {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 8px;
+      background-color: #e2e8f0;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 1rem;
+    }
+    .options button:hover {
+      background-color: #cbd5e0;
+    }
+    .options button.selected {
+      background-color: #4299e1;
+      color: white;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .scorecard {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .progress-bar {
+      height: 10px;
+      width: 100%;
+      background-color: #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+    .progress {
+      height: 100%;
+      width: 0%;
+      background-color: #4299e1;
+      transition: width 1s linear;
+    }
+    @media (max-width: 480px) {
+      .title { font-size: 1.5rem; }
+      .question, .options button { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="profileContainer">
+    <div class="title">Create Your Profile</div>
+    <input type="text" id="username" placeholder="Enter your name" aria-label="Enter your name"
+      style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;">
+    <button onclick="startQuiz()" aria-label="Start Quiz"
+      style="margin-top: 1rem; width: 100%; padding: 1rem; border: none; background-color: #4299e1; color: white; border-radius: 8px;">
+      Start Quiz
+    </button>
+  </div>
+
+  <div class="container" id="quizContainer" style="display: none;">
+    <div class="header">
+      <span>🧑 Profile: <span id="profileName">User</span></span>
+      <span>⏱️ Time Left: <span id="timer">60</span>s</span>
+      <span>✅ Score: <span id="score">0</span></span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" id="progressBar"></div>
+    </div>
+    <div id="quizContent">
+      <div class="title" id="questionTitle">Question 1</div>
+      <div class="question" id="questionText"></div>
+      <div class="options" id="options"></div>
+    </div>
+    <div class="scorecard" id="result" style="display: none;"></div>
+  </div>
+
+  <script>
+    const questions = [
+      { text: "What is the capital of France?", options: ["Paris", "Berlin", "Madrid", "Rome"], answer: "Paris" },
+      { text: "What is 2 + 2?", options: ["3", "4", "5", "6"], answer: "4" },
+      { text: "Which planet is known as the Red Planet?", options: ["Mars", "Venus", "Jupiter", "Saturn"], answer: "Mars" },
+      { text: "Who wrote 'Hamlet'?", options: ["Shakespeare", "Dickens", "Austen", "Orwell"], answer: "Shakespeare" },
+      { text: "What gas do plants absorb?", options: ["CO2", "O2", "N2", "He"], answer: "CO2" },
+      { text: "Largest ocean on Earth?", options: ["Atlantic", "Pacific", "Indian", "Arctic"], answer: "Pacific" },
+      { text: "HTML stands for?", options: ["HyperText Markup Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language", "None"], answer: "HyperText Markup Language" },
+      { text: "Which year did WW2 end?", options: ["1945", "1939", "1918", "1965"], answer: "1945" },
+      { text: "How many continents are there?", options: ["5", "6", "7", "8"], answer: "7" },
+      { text: "Fastest land animal?", options: ["Cheetah", "Lion", "Tiger", "Leopard"], answer: "Cheetah" },
+      { text: "First element on periodic table?", options: ["Hydrogen", "Oxygen", "Carbon", "Helium"], answer: "Hydrogen" },
+      { text: "Water chemical formula?", options: ["H2O", "CO2", "NaCl", "O2"], answer: "H2O" },
+      { text: "Largest planet?", options: ["Jupiter", "Earth", "Saturn", "Neptune"], answer: "Jupiter" },
+      { text: "Square root of 64?", options: ["6", "8", "10", "12"], answer: "8" },
+      { text: "Which animal is known as man's best friend?", options: ["Dog", "Cat", "Horse", "Parrot"], answer: "Dog" },
+    ];
+
+    let current = 0, score = 0, selected = null, time = 60, timerInterval;
+    const timerEl = document.getElementById("timer");
+    const scoreEl = document.getElementById("score");
+    const questionText = document.getElementById("questionText");
+    const optionsContainer = document.getElementById("options");
+    const quizContent = document.getElementById("quizContent");
+    const resultEl = document.getElementById("result");
+    const profileName = document.getElementById("profileName");
+    const progressBar = document.getElementById("progressBar");
+    const questionTitle = document.getElementById("questionTitle");
+    const spreadsheetURL = "https://script.google.com/macros/s/AKfycbzhuBx3j4f3jkxZTLFnWdja8IveHMYcWTDilk3ZEeZ8QklToSZyuk6HoPtBp5dCyO10/exec"; // Replace with your deployed Web App URL
+
+    function shuffleArray(arr) {
+      return arr.sort(() => Math.random() - 0.5);
+    }
+
+    function startQuiz() {
+      const username = document.getElementById("username").value.trim();
+      if (!username) return alert("Please enter your name.");
+      profileName.textContent = username;
+      document.getElementById("profileContainer").style.display = "none";
+      document.getElementById("quizContainer").style.display = "block";
+      renderQuestion();
+      timerInterval = setInterval(() => {
+        if (time > 0) {
+          time--;
+          timerEl.textContent = time;
+          progressBar.style.backgroundColor = time <= 20 ? "#e53e3e" : time <= 40 ? "#ed8936" : "#4299e1";
+        } else {
+          endQuiz("Time's up!");
+        }
+      }, 1000);
+    }
+
+    function renderQuestion() {
+      const q = questions[current];
+      questionTitle.textContent = `Question ${current + 1}`;
+      questionText.textContent = q.text;
+      optionsContainer.innerHTML = "";
+      const shuffledOptions = shuffleArray([...q.options]);
+      shuffledOptions.forEach(option => {
+        const btn = document.createElement("button");
+        btn.textContent = option;
+        btn.onclick = () => selectOption(btn, option);
+        optionsContainer.appendChild(btn);
+      });
+      updateProgressBar();
+    }
+
+    function selectOption(btn, option) {
+      if (selected) return;
+      selected = option;
+      btn.classList.add("selected");
+      [...optionsContainer.querySelectorAll("button")].forEach(b => b.disabled = true);
+      if (option === questions[current].answer) {
+        score++;
+        scoreEl.textContent = score;
+      }
+      setTimeout(() => {
+        current++;
+        selected = null;
+        if (current < questions.length) {
+          renderQuestion();
+        } else {
+          endQuiz("Quiz Completed!");
+        }
+      }, 1000);
+    }
+
+    function updateProgressBar() {
+      const progressPercent = (current / questions.length) * 100;
+      progressBar.style.width = `${progressPercent}%`;
+    }
+
+    function endQuiz(message) {
+  clearInterval(timerInterval);
+  quizContent.style.display = "none";
+  resultEl.style.display = "block";
+  resultEl.innerHTML = `<h2>${message}</h2><p>Your Score: ${score} / ${questions.length}</p><button onclick='location.reload()'>Try Again</button>`;
+  
+  const name = document.getElementById("profileName").textContent;
+  sendScoreToSheet(name, score); // ✅ Send to Google Sheets
+}
+
+
+  function sendScoreToSheet(name, score) {
+  fetch("https://script.google.com/macros/s/AKfycbzhuBx3j4f3jkxZTLFnWdja8IveHMYcWTDilk3ZEeZ8QklToSZyuk6HoPtBp5dCyO10/exec", {
+    method: "POST",
+    mode: "no-cors", // use "no-cors" to skip CORS errors (you won’t see response though)
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: name,
+      score: score
+    })
+  });
+}
+
+
+    function saveScoreToGoogleSheet(name, score) {
+      fetch(spreadsheetURL, {
+        method: "POST",
+        body: JSON.stringify({ name, score }),
+        headers: { "Content-Type": "application/json" }
+      }).then(response => {
+        if (!response.ok) console.error("Failed to save score.");
+      }).catch(err => console.error("Error saving score:", err));
+    }
+  </script>
+</body>
+</html>

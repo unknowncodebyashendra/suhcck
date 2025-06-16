@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced HTML Example</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      width: 300px;
+      height: 200px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    .box h1 {
+      color: #333;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .box p {
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .box button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h1>Advanced HTML Example</h1>
+      <p>This is an example of an HTML page with advanced styling and structure. It includes the usage of flexbox, CSS selectors, and more.</p>
+      <button id="btn">Click Me!</button>
+    </div>
+  </div>
+
+  <script>
+    const button = document.getElementById('btn');
+    button.addEventListener('click', () => {
+      alert('You clicked the button!');
+    });
+  </script>
+</body>
+</html>

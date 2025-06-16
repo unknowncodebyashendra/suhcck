@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>2025 Edition | Science Union of Holy Cross College, Kalutara</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-digimedia-v1.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <link rel="icon" href="assets/images/favicon.png">
+
+
+  </head>
+
+<body>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAj3Ulfhqn86Ywx9ZUZo0D_0S-gfKyGmJY",
+      authDomain: "hcc-science-union.firebaseapp.com",
+      projectId: "hcc-science-union",
+      storageBucket: "hcc-science-union.appspot.com",
+      messagingSenderId: "213899247020",
+      appId: "1:213899247020:web:1699c1540e13c1bcecce09",
+      measurementId: "G-T8XGZDVKS1"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- Pre-header Starts -->
+  <div class="pre-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8 col-7">
+          <ul class="info">
+            <li><a href="report.html"><i class="fa fa-exclamation-triangle"></i>Report</a></li>
+            <li><a href="sitemap.html"><i class="fa fa-globe"></i>Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-5">
+          <ul class="social-media">
+            <li><a href="https://instagram.com/hccscienceunion"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/hccscienceunion?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com/@ScienceUnionofHolyCrossCollege"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/hccsciencunion/"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Pre-header End -->
+
+  <!-- ***** Header Area Start ***** -->
+  <div id="header"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch("header.html")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok " + response.statusText);
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading header:", error));
+  });
+</script>
+
+  <!-- ***** Header Area End ***** -->
+
+
+  <div class="intro-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" style="margin-top: 100px; margin-bottom: 100px;">
+          <h3>2025 Edition : Coming Soon</h3>
+          <h4><em style="color: #912976c7;">Beyond the Breeze: Discovering Nature’s Hidden Power</em></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container" style="background-color: #652f8f;">
+      <div class="row">
+        <div class="col-lg-12" style="display: flex;">
+          <div id="countdown" style="
+            color: #fff;
+            margin: 0 auto;
+            text-align: center;
+          ">
+          <h1 style="font-weight: normal;letter-spacing: .125rem;text-transform: uppercase;margin-top: 20px;">Countdown</h1>
+            <ul>
+              <li style="display: inline-block;font-size: 1.5em;list-style-type: none;padding: 1em;text-transform: uppercase;"><span style="display: block;font-size: 4.5rem;" id="days"></span>days</li>
+              <li style="display: inline-block;font-size: 1.5em;list-style-type: none;padding: 1em;text-transform: uppercase;"><span style="display: block;font-size: 4.5rem;" id="hours"></span>Hours</li>
+              <li style="display: inline-block;font-size: 1.5em;list-style-type: none;padding: 1em;text-transform: uppercase;"><span style="display: block;font-size: 4.5rem;" id="minutes"></span>Minutes</li>
+              <li style="display: inline-block;font-size: 1.5em;list-style-type: none;padding: 1em;text-transform: uppercase;"><span style="display: block;font-size: 4.5rem;" id="seconds"></span>Seconds</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+
+  <div id="wiai" class="services section" style="display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>What is <em>Space</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <p>Space is an incredibly vast and fascinating domain. It encompasses everything beyond Earth's atmosphere, including stars, planets, moons, asteroids, comets, and the vast expanses of interstellar and intergalactic space. The study of space, also known as astronomy, has captured the curiosity of humans for millennia.</p>
+                                <p>Space exploration has advanced significantly over the past century, with milestones such as the first human landing on the Moon in 1969 and the ongoing exploration of Mars by robotic spacecraft. Beyond our own solar system, astronomers have discovered thousands of exoplanets orbiting other stars, sparking excitement about the potential for finding extraterrestrial life.</p>
+                                <p>Space also holds great promise for technological advancements, from satellite communication and navigation systems to space-based telescopes that reveal the mysteries of the universe. Additionally, concepts like space tourism and the colonization of other planets have garnered attention as humanity looks toward the stars for new opportunities and challenges.</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img src="arcanum/image/logo sketch.png" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sponsors" class="our-portfolio section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="section-heading wow fadeInLeft" data-wow-duration="0.1s" data-wow-delay="0.1s">
+            <h6>Holy Cross College</h6>
+            <h4>Science <em>Union</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid wow fadeIn" data-wow-duration="0.1s" data-wow-delay="0.1s">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="loop owl-carousel">
+            <div class="item" style="width: 200.8px;">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img src="assets/images/team/member.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>President</h4>
+                  <span>Mr. Sijel Sasmitha </span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item" style="width: 200.8px;">
+              <div class="portfolio-item">
+              <div class="thumb">
+                <img src="assets/images/team/member.jpg" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Vice President</h4>
+                <span>Mr. Rasaal Kaveesha </span>
+              </div>
+            </div>
+            </a>  
+          </div>
+            <div class="item" style="width: 200.8px;">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img src="assets/images/team/member.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Secretary</h4>
+                  <span>Mr. Shenal Sanduru </span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item" style="width: 200.8px;">
+              <div class="portfolio-item">
+              <div class="thumb">
+                <img src="assets/images/team/member.jpg" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Vice Secretary</h4>
+                <span>Mr. Bhashitha Sandakelum </span>
+              </div>
+            </div>
+            </a>  
+          </div>
+            <div class="item" style="width: 200.8px;">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img src="assets/images/team/member.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Treasury</h4>
+                  <span>Mr. Risindu Pradeeptha </span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item" style="width: 200.8px;">
+              <div class="portfolio-item">
+              <div class="thumb">
+                <img src="assets/images/team/member.jpg" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Vice Treasury</h4>
+                <span>Mr. Kaveen Kalnath </span>
+              </div>
+            </div>
+            </a>  
+          </div>
+            <div class="item" style="width: 200.8px;">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img src="assets/images/team/member.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Editor</h4>
+                  <span>Mr. Senith Darshana </span>
+                </div>
+              </div>
+              </a>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner-2" style="display: none; background-color: black;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" style="display: flex;">
+          <img src="assets/images/geneX/logo.png" alt="">
+          <div class="first-button scroll-to-section" style="margin-top: 5%; margin-left: 25%; margin-bottom: 5%;">
+            <a style="color: #fff !important;border-color: #fff !important;" href="index.html">More Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">The Science Union of Holy Cross College is a student organization that promotes interest in science and technology. We host events like science fairs, workshops, and guest lectures, offering students opportunities to explore, experiment, and showcase their scientific ideas on a broader platform.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="https://hccscienceunion.com/#contact">Contact us</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Other Links</h6>
+          <ul class="footer-links">
+            <li><a href="http://holycrosskalutara.lk/">School Website</a></li>
+            <li><a href="http://holycrosskalutara.lk/">OBU Website</a></li>
+            <li><a href="https://aissa.lk/">AISSA Website</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p><script>
+            const copyrightName = " - Holy Cross College Science Union.";
+              const copyrightDate = new Date();
+              document.write("&copy; "  + copyrightDate.getFullYear()  + copyrightName );
+          </script></p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="instagram" href="https://instagram.com/hccscienceunion"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="facebook" href="https://www.facebook.com/hccscienceunion?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com/@ScienceUnionofHolyCrossCollege"><i class="fa fa-youtube"></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/company/hccsciencunion/"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    (function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  //I'm adding this section so I don't have to keep updating this pen every year :-)
+  //remove this if you don't need it
+  let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = "06/27/",
+      birthday = dayMonth + yyyy;
+  
+  today = mm + "/" + dd + "/" + yyyy;
+  //end
+  
+  const countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {    
+
+        const now = new Date().getTime(),
+              distance = countDown - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "It's my birthday!";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
+  </script>
+
+</body>
+</html>

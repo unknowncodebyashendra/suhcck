@@ -1,0 +1,3 @@
+firebase hosting:channel:deploy dev
+
+firebase deploy

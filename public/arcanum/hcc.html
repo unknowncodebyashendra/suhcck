@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+</head>
+<body>
+    <h2>Form Example</h2>
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+            $ID = $_POST['ID'];
+            $name = $_POST['name'];
+    
+            echo "Name: " . $ID . "<br>";
+            echo "Email: " . $name . "<br>";
+        } else {
+    
+            echo "Form not submitted!";
+        }
+    ?>
+    
+</body>
+</html>

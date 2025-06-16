@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leaderboard | Zephyra'25</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fafc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+    ol {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      background: #edf2f7;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .rank-1 { background-color: gold; color: black; }
+    .rank-2 { background-color: silver; color: black; }
+    .rank-3 { background-color: #cd7f32; color: white; } /* bronze */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🏆 Zephyra'25 Leaderboard</h1>
+    <ol id="leaderboardList">
+      <li>Loading...</li>
+    </ol>
+  </div>
+
+  <script>
+    fetch("https://script.google.com/macros/s/AKfycbxXIE-Mvwr48-dby2ik6L-i92td5rDo9ZzWaq0uSXqwpPdgVt0n2NTGi6K0BEjdWUzcdg/exec")
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById("leaderboardList");
+        list.innerHTML = ""; // Clear previous content
+
+        data.slice(0, 10).forEach((row, i) => {
+          const [name, score] = row;
+          const li = document.createElement("li");
+          li.classList.add(`rank-${i + 1}`);
+          li.innerHTML = `<span>${i + 1}. ${name}</span><span>${score} pts</span>`;
+          list.appendChild(li);
+        });
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById("leaderboardList").innerHTML = "<li>Failed to load leaderboard.</li>";
+      });
+  </script>
+</body>
+</html>

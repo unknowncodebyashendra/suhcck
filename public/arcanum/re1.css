@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+  }
+  .center {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
+  }
+  .center span {
+    color: rgba(255, 255, 255, 0);
+    font-family: font-logo;
+    animation:animate 8s ease infinite alternate;
+  }
+  .center span:nth-child(1) {
+    animation-delay:0.25s;
+  }
+  .center span:nth-child(2) {
+    animation-delay:0.5s;
+  }
+  .center span:nth-child(3) {
+    animation-delay:0.75s;
+  }
+  .center span:nth-child(4) {
+    animation-delay:1s;
+  }
+  .center span:nth-child(5) {
+    animation-delay:1.25s;
+  }
+  .center span:nth-child(6) {
+    animation-delay:1.5s;
+  }
+  .center span:nth-child(7) {
+    animation-delay:1.75s;
+  }
+  .center span:nth-child(8) {
+    animation-delay:2s;
+  }
+  @keyframes animate {
+    from{font-size:0em; color:hwb(0 100% 0%);}
+    to{font-size:6em; color: hwb(214 27% 14%);}
+  }
+
+@font-face {
+  font-family: 'font-logo';
+  src: url(../assets/fonts/Dash-Horizon-Demo.otf);
+}
