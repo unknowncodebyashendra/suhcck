@@ -1,74 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Leaderboard | Zephyra'25</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zephyra'25 Leaderboard</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f7fafc;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fc;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #18002c, #32004d);
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      background-repeat: repeat;
+      color: rgb(25, 21, 21);
     }
     .container {
-      background: white;
+      background: #ffffff;
       padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 500px;
-      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 90%;
       text-align: center;
     }
-    h1 {
-      margin-bottom: 1.5rem;
+    .title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      color: #2e2e2e;
     }
-    ol {
+    .highlight {
+      background-color: #fff3cd;
+    }
+    .leaderboard {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
+      margin: 0;
     }
-    li {
-      background: #edf2f7;
-      padding: 1rem;
-      border-radius: 10px;
-      margin: 0.5rem 0;
-      font-size: 1.2rem;
+    .leaderboard li {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
+      font-size: 1rem;
+      font-weight: 500;
     }
-    .rank-1 { background-color: gold; color: black; }
-    .rank-2 { background-color: silver; color: black; }
-    .rank-3 { background-color: #cd7f32; color: white; } /* bronze */
+    .logos {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .logos img {
+      height: 60px;
+    }
+    .loading {
+      color: #999;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🏆 Zephyra'25 Leaderboard</h1>
-    <ol id="leaderboardList">
-      <li>Loading...</li>
-    </ol>
+    <div class="logos">
+      <img src="../../assets/images/zephyra/logo.png" alt="Zephyra Logo">
+      <img src="../../assets/images/logo_v2_bg.png" alt="Science Union Logo">
+    </div>
+    <div class="title">Zephyra'25 Leaderboard</div>
+    <div id="loading" class="loading">Loading...</div>
+    <ul id="leaderboard" class="leaderboard"></ul>
   </div>
 
   <script>
-    fetch("https://script.google.com/macros/s/AKfycbxXIE-Mvwr48-dby2ik6L-i92td5rDo9ZzWaq0uSXqwpPdgVt0n2NTGi6K0BEjdWUzcdg/exec")
-      .then(res => res.json())
-      .then(data => {
-        const list = document.getElementById("leaderboardList");
-        list.innerHTML = ""; // Clear previous content
+    async function fetchLeaderboard() {
+      try {
+        const res = await fetch("https://script.google.com/macros/s/AKfycbzx9vAzMJL-dc5WXUTWD03Ud4czg4bm-u1sAt-7itXeHaS9hy9RsAlDtpQ-54w_jUlS/exec");
+        const data = await res.json();
 
-        data.slice(0, 10).forEach((row, i) => {
-          const [name, score] = row;
+        // Process: group by name and take the max score
+        const scoresMap = {};
+        data.forEach(entry => {
+          if (!scoresMap[entry.name] || scoresMap[entry.name] < entry.score) {
+            scoresMap[entry.name] = entry.score;
+          }
+        });
+
+        const leaderboardArray = Object.entries(scoresMap)
+          .map(([name, score]) => ({ name, score }))
+          .sort((a, b) => b.score - a.score);
+
+        const list = document.getElementById("leaderboard");
+        const loadingText = document.getElementById("loading");
+        list.innerHTML = "";
+        loadingText.style.display = "none";
+
+        leaderboardArray.forEach((entry, index) => {
           const li = document.createElement("li");
-          li.classList.add(`rank-${i + 1}`);
-          li.innerHTML = `<span>${i + 1}. ${name}</span><span>${score} pts</span>`;
+          if (index === 0) li.classList.add("highlight");
+          li.textContent = `${index + 1}. ${entry.name}`;
+          const scoreSpan = document.createElement("span");
+          scoreSpan.textContent = `${entry.score}`;
+          li.appendChild(scoreSpan);
           list.appendChild(li);
         });
-      })
-      .catch(err => {
-        console.error(err);
-        document.getElementById("leaderboardList").innerHTML = "<li>Failed to load leaderboard.</li>";
-      });
+      } catch (err) {
+        console.error("Failed to fetch leaderboard", err);
+      }
+    }
+
+    // Refresh every 30 seconds
+    fetchLeaderboard();
+    setInterval(fetchLeaderboard, 30000);
   </script>
 </body>
 </html>
